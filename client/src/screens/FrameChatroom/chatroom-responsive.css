@@ -1,0 +1,35 @@
+@media (max-width: 768px) {
+    .header {
+      padding: 0 10px;
+    }
+  
+    .group-chat-name {
+      font-size: 20px;
+    }
+  
+    .icon-arrow-ios-back,
+    .icon-person-outline {
+      height: 30px;
+      width: 30px;
+    }
+  
+    .message-text {
+      max-width: 80%;
+    }
+  
+    .input-group {
+      flex-direction: column;
+      padding: 5px;
+    }
+  
+    .type-here {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+  
+    .send-button {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
