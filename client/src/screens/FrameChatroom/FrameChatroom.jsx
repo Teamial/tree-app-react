@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
+import CurrentUserMessage from '../../components/CurrentUserMessage'; // Adjust path
+import OtherUserMessage from '../../components/OtherUserMessage'; // Adjust path
 import './style.css'; // Adjust path if needed
 
 const socket = io('http://localhost:3001');

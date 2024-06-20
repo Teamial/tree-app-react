@@ -276,6 +276,50 @@
   left: 94px;
 }
 
+.current-user-message {
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.message-bubble.current-user {
+  color: #fff;
+  word-wrap: break-word;
+  background-color: #046603;
+  border-radius: 10px;
+  max-width: 80%;
+  padding: 10px;
+}
+
+.message-sender.current-user {
+  color: #666;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.other-user-message {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.message-bubble {
+  color: #fff;
+  word-wrap: break-word;
+  background-color: #0084ff;
+  border-radius: 10px;
+  max-width: 80%;
+  padding: 10px;
+}
+
+.message-sender {
+  color: #666;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
 .frame-login {
   background-color: #fff;
   flex-direction: row;
