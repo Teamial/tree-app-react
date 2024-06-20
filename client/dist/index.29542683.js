@@ -27416,6 +27416,7 @@ var _currentUserMessageDefault = parcelHelpers.interopDefault(_currentUserMessag
 var _otherUserMessage = require("../../components/OtherUserMessage"); // Adjust path
 var _otherUserMessageDefault = parcelHelpers.interopDefault(_otherUserMessage);
 var _styleCss = require("./style.css"); // Adjust path if needed
+var _chatroomResponsiveCss = require("./chatroom-responsive.css");
 var _s = $RefreshSig$();
 const socket = (0, _socketIoClientDefault.default)("http://localhost:3001");
 const FrameChatroom = ({ username })=>{
@@ -27454,7 +27455,7 @@ const FrameChatroom = ({ username })=>{
                             className: "background"
                         }, void 0, false, {
                             fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                            lineNumber: 34,
+                            lineNumber: 35,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27466,7 +27467,7 @@ const FrameChatroom = ({ username })=>{
                                         className: "rectangle"
                                     }, void 0, false, {
                                         fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                        lineNumber: 37,
+                                        lineNumber: 38,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -27475,7 +27476,7 @@ const FrameChatroom = ({ username })=>{
                                         src: "/img/frame-4.png"
                                     }, void 0, false, {
                                         fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                        lineNumber: 38,
+                                        lineNumber: 39,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27493,7 +27494,7 @@ const FrameChatroom = ({ username })=>{
                                                             src: "/img/rectangle-6.png"
                                                         }, void 0, false, {
                                                             fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                                            lineNumber: 43,
+                                                            lineNumber: 44,
                                                             columnNumber: 23
                                                         }, undefined),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27502,28 +27503,28 @@ const FrameChatroom = ({ username })=>{
                                                             children: "send"
                                                         }, void 0, false, {
                                                             fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                                            lineNumber: 44,
+                                                            lineNumber: 45,
                                                             columnNumber: 23
                                                         }, undefined)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                                    lineNumber: 42,
+                                                    lineNumber: 43,
                                                     columnNumber: 21
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                                lineNumber: 41,
+                                                lineNumber: 42,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                            lineNumber: 40,
+                                            lineNumber: 41,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                        lineNumber: 39,
+                                        lineNumber: 40,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -27533,18 +27534,18 @@ const FrameChatroom = ({ username })=>{
                                         onKeyPress: (e)=>e.key === "Enter" && sendMessage()
                                     }, void 0, false, {
                                         fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                        lineNumber: 49,
+                                        lineNumber: 50,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                lineNumber: 36,
+                                lineNumber: 37,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                            lineNumber: 35,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27557,7 +27558,7 @@ const FrameChatroom = ({ username })=>{
                                             children: msg.text
                                         }, void 0, false, {
                                             fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                            lineNumber: 60,
+                                            lineNumber: 61,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27565,24 +27566,24 @@ const FrameChatroom = ({ username })=>{
                                             children: msg.user
                                         }, void 0, false, {
                                             fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                            lineNumber: 61,
+                                            lineNumber: 62,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, index, true, {
                                     fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                                    lineNumber: 59,
+                                    lineNumber: 60,
                                     columnNumber: 15
                                 }, undefined))
                         }, void 0, false, {
                             fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                            lineNumber: 57,
+                            lineNumber: 58,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                    lineNumber: 33,
+                    lineNumber: 34,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
@@ -27592,7 +27593,7 @@ const FrameChatroom = ({ username })=>{
                             className: "group-chat-name"
                         }, void 0, false, {
                             fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                            lineNumber: 67,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -27601,7 +27602,7 @@ const FrameChatroom = ({ username })=>{
                             src: "/img/icon-person-outline.png"
                         }, void 0, false, {
                             fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                            lineNumber: 68,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -27610,24 +27611,24 @@ const FrameChatroom = ({ username })=>{
                             src: "/img/icon-arrow-ios-back.png"
                         }, void 0, false, {
                             fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                            lineNumber: 69,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-                    lineNumber: 66,
+                    lineNumber: 67,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-            lineNumber: 32,
+            lineNumber: 33,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
-        lineNumber: 31,
+        lineNumber: 32,
         columnNumber: 5
     }, undefined);
 };
@@ -27641,7 +27642,7 @@ $RefreshReg$(_c, "FrameChatroom");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","socket.io-client":"8HBJR","./style.css":"k8bak","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../components/CurrentUserMessage":"1PgK6","../../components/OtherUserMessage":"hr4W0"}],"8HBJR":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","socket.io-client":"8HBJR","./style.css":"k8bak","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../components/CurrentUserMessage":"1PgK6","../../components/OtherUserMessage":"hr4W0","./chatroom-responsive.css":"5cMdL"}],"8HBJR":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -32812,7 +32813,7 @@ $RefreshReg$(_c, "OtherUserMessage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./OtherUserMessage.css":"hOJ9J","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hOJ9J":[function() {},{}],"kuwGx":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./OtherUserMessage.css":"hOJ9J","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hOJ9J":[function() {},{}],"5cMdL":[function() {},{}],"kuwGx":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6de2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
