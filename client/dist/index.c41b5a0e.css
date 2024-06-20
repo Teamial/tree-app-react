@@ -51,6 +51,12 @@ body {
   right: 24px;
 }
 
+.chat-body {
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+}
+
 .messages-container {
   background-color: #f5fdee;
   flex: 1;
@@ -94,8 +100,11 @@ body {
 
 .send-text {
   background-color: #baec99;
-  align-items: center;
   padding: 10px;
+}
+
+.input-group {
+  align-items: center;
   display: flex;
 }
 
@@ -224,7 +233,7 @@ body {
     height: 30px;
   }
 
-  .message-text {
+  .message-bubble {
     max-width: 80%;
   }
 

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: my-app
+    env: node
+    plan: free
+    buildCommand: cd client && npm install && npm run build
+    startCommand: npm install && npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLIENT_URL
+        value: https://my-app.onrender.com # Update this to your Render URL after deployment

@@ -36,8 +36,8 @@ export const FrameChatroom = ({ username }) => {
       <div className="chat-body">
         <div className="messages-container">
           {messages.map((msg, index) => (
-            <div key={index} className={`message ${msg.user === username ? 'current-user' : 'other-user'}`}>
-              <div className="message-text">{msg.text}</div>
+            <div key={index} className={`message-wrapper ${msg.user === username ? 'current-user' : 'other-user'}`}>
+              <div className="message-bubble">{msg.text}</div>
               <div className="message-sender">{msg.user === username ? 'You' : msg.user}</div>
             </div>
           ))}

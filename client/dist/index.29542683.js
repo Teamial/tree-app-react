@@ -27483,10 +27483,10 @@ const FrameChatroom = ({ username })=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "messages-container",
                         children: messages.map((msg, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: `message ${msg.user === username ? "current-user" : "other-user"}`,
+                                className: `message-wrapper ${msg.user === username ? "current-user" : "other-user"}`,
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "message-text",
+                                        className: "message-bubble",
                                         children: msg.text
                                     }, void 0, false, {
                                         fileName: "src/screens/FrameChatroom/FrameChatroom.jsx",
@@ -27571,7 +27571,7 @@ $RefreshReg$(_c, "FrameChatroom");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","socket.io-client":"8HBJR","./style.css":"k8bak","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./chatroom-responsive.css":"5cMdL"}],"8HBJR":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"k8bak","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","socket.io-client":"8HBJR","./chatroom-responsive.css":"5cMdL"}],"k8bak":[function() {},{}],"8HBJR":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -32628,7 +32628,7 @@ function Backoff(opts) {
     this.jitter = jitter;
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k8bak":[function() {},{}],"5cMdL":[function() {},{}],"kuwGx":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5cMdL":[function() {},{}],"kuwGx":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6de2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -32727,97 +32727,34 @@ var _styleCss = require("./style.css");
 var _s = $RefreshSig$();
 const FrameLogin = ({ onLogin })=>{
     _s();
-    const [email, setEmail] = (0, _react.useState)("");
+    const [username, setUsername] = (0, _react.useState)("");
     const [password, setPassword] = (0, _react.useState)("");
     const handleLoginClick = ()=>{
-        if (email && password) onLogin(email);
+        if (username && password) onLogin(username);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "frame-login",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "div-2",
+            className: "login-container",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "frame-4",
+                    className: "login-logo",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-wrapper-6",
-                            children: "email/username"
+                            className: "text-wrapper-10",
+                            children: "TreeTalk"
                         }, void 0, false, {
                             fileName: "src/screens/FrameLogin/FrameLogin.jsx",
                             lineNumber: 18,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "group-2",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                className: "text",
-                                value: email,
-                                onChange: (e)=>setEmail(e.target.value)
-                            }, void 0, false, {
-                                fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                                lineNumber: 20,
-                                columnNumber: 13
-                            }, undefined)
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "remove-BG",
+                            alt: "TreeTalk Logo",
+                            src: "/img/remove-bg-369-1.png"
                         }, void 0, false, {
                             fileName: "src/screens/FrameLogin/FrameLogin.jsx",
                             lineNumber: 19,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-wrapper-7",
-                            children: "password"
-                        }, void 0, false, {
-                            fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                            lineNumber: 22,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "group-2",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                className: "input",
-                                type: "password",
-                                value: password,
-                                onChange: (e)=>setPassword(e.target.value)
-                            }, void 0, false, {
-                                fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                                lineNumber: 24,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                            lineNumber: 23,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-wrapper-8",
-                            children: "forgot password?"
-                        }, void 0, false, {
-                            fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                            lineNumber: 26,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "overlap-wrapper",
-                            onClick: handleLoginClick,
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "overlap-3",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "text-wrapper-9",
-                                    children: "login"
-                                }, void 0, false, {
-                                    fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                                    lineNumber: 29,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                                lineNumber: 28,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                            lineNumber: 27,
                             columnNumber: 11
                         }, undefined)
                     ]
@@ -32827,56 +32764,64 @@ const FrameLogin = ({ onLogin })=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "login-logo",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "overlap-4",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "text-wrapper-10",
-                                children: "TreeTalk"
-                            }, void 0, false, {
-                                fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                                lineNumber: 35,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                className: "remove-BG",
-                                alt: "Remove BG",
-                                src: "/img/remove-bg-369-1.png"
-                            }, void 0, false, {
-                                fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                                lineNumber: 36,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                        lineNumber: 34,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
+                    className: "login-form",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            className: "login-input",
+                            placeholder: "Username",
+                            value: username,
+                            onChange: (e)=>setUsername(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/screens/FrameLogin/FrameLogin.jsx",
+                            lineNumber: 22,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            className: "login-input",
+                            type: "password",
+                            placeholder: "Password",
+                            value: password,
+                            onChange: (e)=>setPassword(e.target.value)
+                        }, void 0, false, {
+                            fileName: "src/screens/FrameLogin/FrameLogin.jsx",
+                            lineNumber: 28,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "login-button",
+                            onClick: handleLoginClick,
+                            children: "Login"
+                        }, void 0, false, {
+                            fileName: "src/screens/FrameLogin/FrameLogin.jsx",
+                            lineNumber: 35,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
                     fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                    lineNumber: 33,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "group-3",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "overlap-5",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "text-wrapper-11",
+                    className: "register-link",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            children: "Don't have an account? "
+                        }, void 0, false, {
+                            fileName: "src/screens/FrameLogin/FrameLogin.jsx",
+                            lineNumber: 40,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            href: "#",
                             children: "Register Here"
                         }, void 0, false, {
                             fileName: "src/screens/FrameLogin/FrameLogin.jsx",
                             lineNumber: 41,
-                            columnNumber: 13
+                            columnNumber: 11
                         }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/screens/FrameLogin/FrameLogin.jsx",
-                        lineNumber: 40,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
+                    ]
+                }, void 0, true, {
                     fileName: "src/screens/FrameLogin/FrameLogin.jsx",
                     lineNumber: 39,
                     columnNumber: 9
@@ -32893,7 +32838,7 @@ const FrameLogin = ({ onLogin })=>{
         columnNumber: 5
     }, undefined);
 };
-_s(FrameLogin, "TSZhDBNy8CmbxXgprY/vvMmTG1Q=");
+_s(FrameLogin, "wuQOK7xaXdVz4RMrZQhWbI751Oc=");
 _c = FrameLogin;
 var _c;
 $RefreshReg$(_c, "FrameLogin");
