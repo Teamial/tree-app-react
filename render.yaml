@@ -1,9 +1,10 @@
+# This file is used to configure the Render deployment.
 services:
   - type: web
     name: my-app
     env: node
     plan: free
-    buildCommand: cd server && npm install && npm run client-install && npm run client-build
+    buildCommand: cd server && npm install && npm run build
     startCommand: cd server && npm start
     envVars:
       - key: NODE_ENV
