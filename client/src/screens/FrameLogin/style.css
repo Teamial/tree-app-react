@@ -1,0 +1,220 @@
+.frame-login {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.frame-login .div-2 {
+  background-color: #ffffff;
+  height: 832px;
+  position: relative;
+  width: 1280px;
+}
+
+.frame-login .frame-4 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  height: 218px;
+  justify-content: center;
+  left: 494px;
+  position: absolute;
+  top: 525px;
+  width: 274px;
+}
+
+.frame-login .text-wrapper-6 {
+  color: #000000bf;
+  font-family: "Lexend Zetta", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -1.6px;
+  line-height: normal;
+  margin-top: -12px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.frame-login .group-2 {
+  height: 49px;
+  margin-left: -26.5px;
+  margin-right: -28.5px;
+  position: relative;
+  width: 329px;
+}
+
+.frame-login .text {
+  -webkit-backdrop-filter: blur(4px) brightness(100%);
+  backdrop-filter: blur(4px) brightness(100%);
+  background-color: #f5fdee;
+  border: 3px solid;
+  border-color: #000000;
+  border-radius: 16px;
+  color: #000000;
+  font-family: "Lexend Zetta", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  height: 21px;
+  left: 4px;
+  letter-spacing: -1.4px;
+  line-height: normal;
+  padding: 0;
+  text-align: center;
+  top: 11px;
+  width: 327px;
+}
+
+.frame-login .text-wrapper-7 {
+  color: #000000bf;
+  font-family: "Lexend Zetta", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -1.6px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.frame-login .input {
+  -webkit-backdrop-filter: blur(4px) brightness(100%);
+  backdrop-filter: blur(4px) brightness(100%);
+  background-color: #f5fdee;
+  border: 3px solid;
+  border-color: #000000;
+  border-radius: 16px;
+  color: #000000;
+  font-family: "Lexend Zetta", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  height: 18px;
+  left: 6px;
+  letter-spacing: -1.4px;
+  line-height: normal;
+  padding: 0;
+  text-align: center;
+  top: 12px;
+  width: 327px;
+}
+
+.frame-login .text-wrapper-8 {
+  color: #000000bf;
+  font-family: "Lexend Zetta-Regular", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -1.3px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.frame-login .overlap-wrapper {
+  height: 31px;
+  margin-bottom: -11px;
+  position: relative;
+  width: 203px;
+}
+
+.frame-login .overlap-3 {
+  background-color: #baec99;
+  border: 1px solid;
+  border-color: #046603;
+  border-radius: 7px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 31px;
+  position: relative;
+  width: 201px;
+}
+
+.frame-login .text-wrapper-9 {
+  color: #000000;
+  font-family: "Lexend Zetta", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  left: 16px;
+  letter-spacing: -1.6px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+  width: 169px;
+}
+
+.frame-login .login-logo {
+  height: 412px;
+  left: 410px;
+  position: absolute;
+  top: 68px;
+  transition: all 0.2s ease;
+  width: 433px;
+}
+
+.frame-login .overlap-4 {
+  background-image: url(../../../static/img/ellipse-1.png);
+  background-size: 100% 100%;
+  height: 539px;
+  left: -65px;
+  position: relative;
+  top: -63px;
+  width: 564px;
+}
+
+.frame-login .text-wrapper-10 {
+  color: #000000;
+  font-family: "Lexend Zetta", Helvetica;
+  font-size: 32px;
+  font-weight: 700;
+  height: 40px;
+  left: 176px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 425px;
+}
+
+.frame-login .remove-BG {
+  height: 289px;
+  left: 146px;
+  object-fit: cover;
+  position: absolute;
+  top: 125px;
+  width: 272px;
+}
+
+.frame-login .group-3 {
+  height: 32px;
+  left: 43px;
+  position: absolute;
+  top: 68px;
+  width: 180px;
+}
+
+.frame-login .overlap-5 {
+  background-color: #91d906;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 7px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 32px;
+  position: relative;
+  width: 178px;
+}
+
+.frame-login .text-wrapper-11 {
+  color: #000000;
+  font-family: "Lexend Zetta", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  left: 10px;
+  letter-spacing: -1.6px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+}

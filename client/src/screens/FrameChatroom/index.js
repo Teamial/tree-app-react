@@ -1,0 +1,1 @@
+export { FrameChatroom } from "./FrameChatroom";
