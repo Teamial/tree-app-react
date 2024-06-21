@@ -9,10 +9,11 @@
     "build": "npm run client-install && npm run client-build"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "http": "^0.0.1-security",
     "socket.io": "^4.0.1",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0"
+    "yarn": "^1.22.22"
   }
 }

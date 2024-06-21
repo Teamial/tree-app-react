@@ -3,8 +3,10 @@
     "version": "1.0.0",
     "private": true,
     "workspaces": [
-      "client",
-      "server"
-    ]
-  }
-  
+        "client",
+        "server"
+    ],
+    "dependencies": {
+        "yarn": "^1.22.22"
+    }
+}
