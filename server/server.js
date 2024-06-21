@@ -15,7 +15,11 @@ const io = socketIo(server, {
   }
 });
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://tree-app-react-client.vercel.app", "http://localhost:3000"],
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 
 io.on('connection', (socket) => {
   console.log('New client connected');
@@ -32,10 +36,10 @@ io.on('connection', (socket) => {
 
 // Serve static files from the React app
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.use(express.static(path.join(__dirname, 'client/src')));
 
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client/src', 'index.html'));
   });
 }
 

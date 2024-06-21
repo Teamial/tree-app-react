@@ -27246,7 +27246,7 @@ var _socketIoClientDefault = parcelHelpers.interopDefault(_socketIoClient);
 var _styleCss = require("./style.css"); // Adjust path if needed
 var _chatroomResponsiveCss = require("./chatroom-responsive.css"); // For media queries
 var _s = $RefreshSig$();
-const socket = (0, _socketIoClientDefault.default)("https://tree-app-react-client-cre4fasl1-teamials-projects.vercel.app");
+const socket = (0, _socketIoClientDefault.default)("tree-app-react-client.vercel.app");
 const FrameChatroom = ({ username })=>{
     _s();
     const [messages, setMessages] = (0, _react.useState)([]);
