@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"2LXZ8":[function(require,module,exports) {
+})({"e97Oz":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -583,9 +583,9 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"1xC6H":[function(require,module,exports) {
-var Refresh = require("6d18d6bd340e7473");
-var ErrorOverlay = require("74ad5ea14201648c");
+},{}],"eLmFg":[function(require,module,exports) {
+var Refresh = require("e3daedbd352fccbb");
+var ErrorOverlay = require("5ba6fd152f7c7303");
 Refresh.injectIntoGlobalHook(window);
 window.$RefreshReg$ = function() {};
 window.$RefreshSig$ = function() {
@@ -604,11 +604,11 @@ window.addEventListener("parcelhmraccept", ()=>{
     ErrorOverlay.dismissRuntimeErrors();
 });
 
-},{"6d18d6bd340e7473":"786KC","74ad5ea14201648c":"1dldy"}],"786KC":[function(require,module,exports) {
+},{"e3daedbd352fccbb":"dWRBd","5ba6fd152f7c7303":"8ZQUk"}],"dWRBd":[function(require,module,exports) {
 "use strict";
-module.exports = require("96622d495519d4e");
+module.exports = require("2031a7b6a954c38");
 
-},{"96622d495519d4e":"hdge7"}],"hdge7":[function(require,module,exports) {
+},{"2031a7b6a954c38":"xLPoe"}],"xLPoe":[function(require,module,exports) {
 /** @license React v0.9.0
  * react-refresh-runtime.development.js
  *
@@ -1068,8 +1068,8 @@ module.exports = require("96622d495519d4e");
     exports.setSignature = setSignature;
 })();
 
-},{}],"1dldy":[function(require,module,exports) {
-var process = require("d1546958eb39fdcf");
+},{}],"8ZQUk":[function(require,module,exports) {
+var process = require("1bf9926b731937f");
 !function(e, t) {
     module.exports = t();
 }(window, function() {
@@ -2799,7 +2799,7 @@ var process = require("d1546958eb39fdcf");
     ]);
 });
 
-},{"d1546958eb39fdcf":"d5jf4"}],"d5jf4":[function(require,module,exports) {
+},{"1bf9926b731937f":"d5jf4"}],"d5jf4":[function(require,module,exports) {
 // shim for using process in browser
 var process = module.exports = {};
 // cached from whatever global is present so that test runners that stub it
@@ -2985,7 +2985,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _frameChatroom.FrameCha
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./style.css":"k8bak","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./FrameChatroom":"fw6xt","./App":"kuwGx"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./FrameChatroom":"fw6xt","./App":"kuwGx","./style.css":"k8bak","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"27Ofc"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27228,175 +27228,7 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"k8bak":[function() {},{}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("7422ead32dcc1e6b");
-function debounce(func, delay) {
-    {
-        let timeout = undefined;
-        let lastTime = 0;
-        return function(args) {
-            // Call immediately if last call was more than the delay ago.
-            // Otherwise, set a timeout. This means the first call is fast
-            // (for the common case of a single update), and subsequent updates
-            // are batched.
-            let now = Date.now();
-            if (now - lastTime > delay) {
-                lastTime = now;
-                func.call(null, args);
-            } else {
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = undefined;
-                    lastTime = Date.now();
-                    func.call(null, args);
-                }, delay);
-            }
-        };
-    }
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30);
-// Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports;
-                // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
-                // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-}
-// When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        var typeID = id + " %exports% " + key;
-        Refresh.register(exportValue, typeID);
-    }
-}
-
-},{"7422ead32dcc1e6b":"786KC"}],"fw6xt":[function(require,module,exports) {
+},{}],"fw6xt":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6951 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27414,7 +27246,7 @@ var _socketIoClientDefault = parcelHelpers.interopDefault(_socketIoClient);
 var _styleCss = require("./style.css"); // Adjust path if needed
 var _chatroomResponsiveCss = require("./chatroom-responsive.css"); // For media queries
 var _s = $RefreshSig$();
-const socket = (0, _socketIoClientDefault.default)("http://localhost:3001");
+const socket = (0, _socketIoClientDefault.default)("https://your-server-url.vercel.app");
 const FrameChatroom = ({ username })=>{
     _s();
     const [messages, setMessages] = (0, _react.useState)([]);
@@ -27571,7 +27403,7 @@ $RefreshReg$(_c, "FrameChatroom");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"k8bak","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","socket.io-client":"8HBJR","./chatroom-responsive.css":"5cMdL"}],"k8bak":[function() {},{}],"8HBJR":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","socket.io-client":"8HBJR","./style.css":"k8bak","./chatroom-responsive.css":"5cMdL","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"27Ofc"}],"8HBJR":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -27625,7 +27457,7 @@ Object.assign(lookup, {
     connect: lookup
 });
 
-},{"./url.js":"9Ze3o","./manager.js":"94vh9","./socket.js":"kbWgu","socket.io-parser":"2lQL3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9Ze3o":[function(require,module,exports) {
+},{"./url.js":"9Ze3o","./manager.js":"94vh9","./socket.js":"kbWgu","socket.io-parser":"2lQL3","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"9Ze3o":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -27671,7 +27503,7 @@ function url(uri, path = "", loc) {
     return obj;
 }
 
-},{"engine.io-client":"jBHFs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jBHFs":[function(require,module,exports) {
+},{"engine.io-client":"jBHFs","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"jBHFs":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Transport", ()=>(0, _transportJs.Transport));
@@ -27690,7 +27522,7 @@ var _parseuriJs = require("./contrib/parseuri.js");
 var _websocketConstructorJs = require("./transports/websocket-constructor.js");
 const protocol = (0, _socketJs.Socket).protocol;
 
-},{"./socket.js":"kpkbh","./transport.js":"kwKKC","./transports/index.js":"2neV7","./util.js":"d7eyH","./contrib/parseuri.js":"5RFyz","./transports/websocket-constructor.js":"dDJnh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kpkbh":[function(require,module,exports) {
+},{"./socket.js":"kpkbh","./transport.js":"kwKKC","./transports/index.js":"2neV7","./util.js":"d7eyH","./contrib/parseuri.js":"5RFyz","./transports/websocket-constructor.js":"dDJnh","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"kpkbh":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Socket", ()=>Socket);
@@ -28186,7 +28018,7 @@ class Socket extends (0, _componentEmitter.Emitter) {
 }
 Socket.protocol = (0, _engineIoParser.protocol);
 
-},{"./transports/index.js":"2neV7","./util.js":"d7eyH","./contrib/parseqs.js":"aFNEN","./contrib/parseuri.js":"5RFyz","@socket.io/component-emitter":"3GA7L","engine.io-parser":"2SHiP","./transports/websocket-constructor.js":"dDJnh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2neV7":[function(require,module,exports) {
+},{"./transports/index.js":"2neV7","./util.js":"d7eyH","./contrib/parseqs.js":"aFNEN","./contrib/parseuri.js":"5RFyz","@socket.io/component-emitter":"3GA7L","engine.io-parser":"2SHiP","./transports/websocket-constructor.js":"dDJnh","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"2neV7":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "transports", ()=>transports);
@@ -28199,7 +28031,7 @@ const transports = {
     polling: (0, _pollingJs.Polling)
 };
 
-},{"./polling.js":"HgHsi","./websocket.js":"8y2e2","./webtransport.js":"k7fng","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"HgHsi":[function(require,module,exports) {
+},{"./polling.js":"HgHsi","./websocket.js":"8y2e2","./webtransport.js":"k7fng","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"HgHsi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Polling", ()=>Polling);
@@ -28527,7 +28359,7 @@ function unloadHandler() {
     for(let i in Request.requests)if (Request.requests.hasOwnProperty(i)) Request.requests[i].abort();
 }
 
-},{"../transport.js":"kwKKC","../contrib/yeast.js":"5cPiI","engine.io-parser":"2SHiP","./xmlhttprequest.js":"gG0MI","@socket.io/component-emitter":"3GA7L","../util.js":"d7eyH","../globalThis.js":"7zbHc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kwKKC":[function(require,module,exports) {
+},{"../transport.js":"kwKKC","../contrib/yeast.js":"5cPiI","engine.io-parser":"2SHiP","./xmlhttprequest.js":"gG0MI","@socket.io/component-emitter":"3GA7L","../util.js":"d7eyH","../globalThis.js":"7zbHc","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"kwKKC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "TransportError", ()=>TransportError);
@@ -28648,7 +28480,7 @@ class Transport extends (0, _componentEmitter.Emitter) {
     }
 }
 
-},{"engine.io-parser":"2SHiP","@socket.io/component-emitter":"3GA7L","./util.js":"d7eyH","./contrib/parseqs.js":"aFNEN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2SHiP":[function(require,module,exports) {
+},{"engine.io-parser":"2SHiP","@socket.io/component-emitter":"3GA7L","./util.js":"d7eyH","./contrib/parseqs.js":"aFNEN","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"2SHiP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "createPacketEncoderStream", ()=>createPacketEncoderStream);
@@ -28785,7 +28617,7 @@ function createPacketDecoderStream(maxPayload, binaryType) {
 }
 const protocol = 4;
 
-},{"./encodePacket.js":"lUiyb","./decodePacket.js":"k0BCP","./commons.js":"kLmJ7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lUiyb":[function(require,module,exports) {
+},{"./encodePacket.js":"lUiyb","./decodePacket.js":"k0BCP","./commons.js":"kLmJ7","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"lUiyb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "encodePacketToBinary", ()=>encodePacketToBinary);
@@ -28833,7 +28665,7 @@ function encodePacketToBinary(packet, callback) {
     });
 }
 
-},{"./commons.js":"kLmJ7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kLmJ7":[function(require,module,exports) {
+},{"./commons.js":"kLmJ7","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"kLmJ7":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "PACKET_TYPES", ()=>PACKET_TYPES);
@@ -28856,7 +28688,37 @@ const ERROR_PACKET = {
     data: "parser error"
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k0BCP":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"bt1Kb":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"k0BCP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "decodePacket", ()=>decodePacket);
@@ -28909,7 +28771,7 @@ const mapBinary = (data, binaryType)=>{
     }
 };
 
-},{"./commons.js":"kLmJ7","./contrib/base64-arraybuffer.js":"c3dDo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"c3dDo":[function(require,module,exports) {
+},{"./commons.js":"kLmJ7","./contrib/base64-arraybuffer.js":"c3dDo","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"c3dDo":[function(require,module,exports) {
 // imported from https://github.com/socketio/base64-arraybuffer
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -28950,7 +28812,7 @@ const decode = (base64)=>{
     return arraybuffer;
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3GA7L":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"3GA7L":[function(require,module,exports) {
 /**
  * Initialize a new `Emitter`.
  *
@@ -29075,7 +28937,7 @@ Emitter.prototype.emitReserved = Emitter.prototype.emit;
     return !!this.listeners(event).length;
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d7eyH":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"d7eyH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "pick", ()=>pick);
@@ -29123,7 +28985,7 @@ function utf8Length(str) {
     return length;
 }
 
-},{"./globalThis.js":"7zbHc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7zbHc":[function(require,module,exports) {
+},{"./globalThis.js":"7zbHc","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"7zbHc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "globalThisShim", ()=>globalThisShim);
@@ -29133,7 +28995,7 @@ const globalThisShim = (()=>{
     else return Function("return this")();
 })();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aFNEN":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"aFNEN":[function(require,module,exports) {
 // imported from https://github.com/galkn/querystring
 /**
  * Compiles a querystring
@@ -29168,7 +29030,7 @@ function decode(qs) {
     return qry;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5cPiI":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"5cPiI":[function(require,module,exports) {
 // imported from https://github.com/unshiftio/yeast
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -29218,7 +29080,7 @@ function yeast() {
 //
 for(; i < length; i++)map[alphabet[i]] = i;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gG0MI":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"gG0MI":[function(require,module,exports) {
 // browser shim for xmlhttprequest module
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -29240,7 +29102,7 @@ function XHR(opts) {
 }
 function createCookieJar() {}
 
-},{"../contrib/has-cors.js":"kPgMI","../globalThis.js":"7zbHc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kPgMI":[function(require,module,exports) {
+},{"../contrib/has-cors.js":"kPgMI","../globalThis.js":"7zbHc","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"kPgMI":[function(require,module,exports) {
 // imported from https://github.com/component/has-cors
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -29254,7 +29116,7 @@ try {
 }
 const hasCORS = value;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8y2e2":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"8y2e2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "WS", ()=>WS);
@@ -29375,7 +29237,7 @@ class WS extends (0, _transportJs.Transport) {
     }
 }
 
-},{"64d8415e9cf90979":"fCgem","../transport.js":"kwKKC","../contrib/yeast.js":"5cPiI","../util.js":"d7eyH","./websocket-constructor.js":"dDJnh","engine.io-parser":"2SHiP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fCgem":[function(require,module,exports) {
+},{"64d8415e9cf90979":"fCgem","../transport.js":"kwKKC","../contrib/yeast.js":"5cPiI","../util.js":"d7eyH","./websocket-constructor.js":"dDJnh","engine.io-parser":"2SHiP","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"fCgem":[function(require,module,exports) {
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -30988,7 +30850,7 @@ const WebSocket = (0, _globalThisJs.globalThisShim).WebSocket || (0, _globalThis
 const usingBrowserWebSocket = true;
 const defaultBinaryType = "arraybuffer";
 
-},{"../globalThis.js":"7zbHc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k7fng":[function(require,module,exports) {
+},{"../globalThis.js":"7zbHc","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"k7fng":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "WT", ()=>WT);
@@ -31052,7 +30914,7 @@ class WT extends (0, _transportJs.Transport) {
     }
 }
 
-},{"../transport.js":"kwKKC","./websocket-constructor.js":"dDJnh","engine.io-parser":"2SHiP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5RFyz":[function(require,module,exports) {
+},{"../transport.js":"kwKKC","./websocket-constructor.js":"dDJnh","engine.io-parser":"2SHiP","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"5RFyz":[function(require,module,exports) {
 // imported from https://github.com/galkn/parseuri
 /**
  * Parses a URI
@@ -31121,7 +30983,7 @@ function queryKey(uri, query) {
     return data;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"94vh9":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"94vh9":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Manager", ()=>Manager);
@@ -31429,7 +31291,7 @@ class Manager extends (0, _componentEmitter.Emitter) {
     }
 }
 
-},{"engine.io-client":"jBHFs","./socket.js":"kbWgu","socket.io-parser":"2lQL3","./on.js":"8FFT1","./contrib/backo2.js":"cZLsm","@socket.io/component-emitter":"3GA7L","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kbWgu":[function(require,module,exports) {
+},{"engine.io-client":"jBHFs","./socket.js":"kbWgu","socket.io-parser":"2lQL3","./on.js":"8FFT1","./contrib/backo2.js":"cZLsm","@socket.io/component-emitter":"3GA7L","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"kbWgu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -32192,7 +32054,7 @@ class Socket extends (0, _componentEmitter.Emitter) {
     }
 }
 
-},{"socket.io-parser":"2lQL3","./on.js":"8FFT1","@socket.io/component-emitter":"3GA7L","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2lQL3":[function(require,module,exports) {
+},{"socket.io-parser":"2lQL3","./on.js":"8FFT1","@socket.io/component-emitter":"3GA7L","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"2lQL3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "protocol", ()=>protocol);
@@ -32449,7 +32311,7 @@ class Decoder extends (0, _componentEmitter.Emitter) {
     }
 }
 
-},{"@socket.io/component-emitter":"3GA7L","./binary.js":"juaze","./is-binary.js":"0mMso","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"juaze":[function(require,module,exports) {
+},{"@socket.io/component-emitter":"3GA7L","./binary.js":"juaze","./is-binary.js":"0mMso","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"juaze":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -32517,7 +32379,7 @@ function _reconstructPacket(data, buffers) {
     return data;
 }
 
-},{"./is-binary.js":"0mMso","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"0mMso":[function(require,module,exports) {
+},{"./is-binary.js":"0mMso","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"0mMso":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -32552,7 +32414,7 @@ function hasBinary(obj, toJSON) {
     return false;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8FFT1":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"8FFT1":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "on", ()=>on);
@@ -32563,7 +32425,7 @@ function on(obj, ev, fn) {
     };
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cZLsm":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"cZLsm":[function(require,module,exports) {
 /**
  * Initialize backoff timer with `opts`.
  *
@@ -32628,7 +32490,145 @@ function Backoff(opts) {
     this.jitter = jitter;
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5cMdL":[function() {},{}],"kuwGx":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb"}],"k8bak":[function() {},{}],"5cMdL":[function() {},{}],"27Ofc":[function(require,module,exports) {
+"use strict";
+var Refresh = require("73a6a3361f7f06f4");
+function debounce(func, delay) {
+    {
+        let timeout = undefined;
+        let lastTime = 0;
+        return function(args) {
+            // Call immediately if last call was more than the delay ago.
+            // Otherwise, set a timeout. This means the first call is fast
+            // (for the common case of a single update), and subsequent updates
+            // are batched.
+            let now = Date.now();
+            if (now - lastTime > delay) {
+                lastTime = now;
+                func.call(null, args);
+            } else {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = undefined;
+                    lastTime = Date.now();
+                    func.call(null, args);
+                }, delay);
+            }
+        };
+    }
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30);
+// Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports;
+                // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
+                // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+}
+// When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        var typeID = id + " %exports% " + key;
+        Refresh.register(exportValue, typeID);
+    }
+}
+
+},{"73a6a3361f7f06f4":"dWRBd"}],"kuwGx":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6de2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -32710,7 +32710,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./FrameChatroom":"fw6xt","../FrameLogin/FrameLogin":"8k3np","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./style.css":"k8bak","react-dom/client":"lOjBx"}],"8k3np":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./FrameChatroom":"fw6xt","../FrameLogin/FrameLogin":"8k3np","./style.css":"k8bak","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"27Ofc"}],"8k3np":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9405 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -32848,6 +32848,6 @@ $RefreshReg$(_c, "FrameLogin");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"lSCgu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lSCgu":[function() {},{}],"k8bak":[function() {},{}]},["2LXZ8","1xC6H","bHMz1"], "bHMz1", "parcelRequire3efa")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./style.css":"lSCgu","@parcel/transformer-js/src/esmodule-helpers.js":"bt1Kb","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"27Ofc"}],"lSCgu":[function() {},{}],"k8bak":[function() {},{}],"k8bak":[function() {},{}]},["e97Oz","eLmFg","bHMz1"], "bHMz1", "parcelRequire3efa")
 
 //# sourceMappingURL=index.29542683.js.map
