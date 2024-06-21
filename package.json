@@ -11,6 +11,6 @@
         "parcel": "^2.12.0"
     },
     "scripts": {
-        "build": "cd client && npm install && npm run build && cd ../server && npm install"
+        "build": "cd client && npm install && PUBLIC_URL=./ npm run build && cd ../server && npm install"
     }
 }
