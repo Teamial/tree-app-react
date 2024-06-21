@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 import './style.css'; // Adjust path if needed
 import './chatroom-responsive.css'; // For media queries
 
-const socket = io(process.env.REACT_APP_SERVER_URL || 'https://your-server-url.vercel.app');
+const socket = io(process.env.REACT_APP_SERVER_URL || 'https://tree-app-react-client-cre4fasl1-teamials-projects.vercel.app');
 
 export const FrameChatroom = ({ username }) => {
   const [messages, setMessages] = useState([]);

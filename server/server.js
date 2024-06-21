@@ -9,8 +9,9 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: process.env.CLIENT_URL || "https://tree-app-react-client.vercel.app",
-    methods: ["GET", "POST"]
+    origin: ["https://tree-app-react-client.vercel.app", "http://localhost:3000"],
+    methods: ["GET", "POST"],
+    credentials: true
   }
 });
 

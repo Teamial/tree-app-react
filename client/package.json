@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Frontend for Anima project",
   "scripts": {
-    "build": "parcel build src/index.html",
+    "build": "react-scripts build && mv build/* src/ && rmdir build",
     "start": "parcel src/index.html --port 3000"
   },
   "dependencies": {
