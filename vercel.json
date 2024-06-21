@@ -6,10 +6,10 @@
       "use": "@vercel/node"
     },
     {
-      "src": "client/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "src"
+        "distDir": "client/build"
       }
     }
   ],
@@ -23,32 +23,20 @@
       "dest": "/server/server.js"
     },
     {
-      "src": "^/static/img/(.*)",
-      "dest": "/client/static/img/$1"
-    },
-    {
       "src": "^/static/(.*)",
-      "dest": "/client/src/static/$1"
+      "dest": "/client/build/static/$1"
     },
     {
-      "src": "^/favicon.ico",
-      "dest": "/client/src/favicon.ico"
+      "src": "^/(.*)\\.(?:ico|png|jpg|jpeg|gif|svg)$",
+      "dest": "/client/build/$1.$2"
     },
     {
-      "src": "^/manifest.json",
-      "dest": "/client/src/manifest.json"
-    },
-    {
-      "src": "^/asset-manifest.json",
-      "dest": "/client/src/asset-manifest.json"
-    },
-    {
-      "src": "^/(.*).png",
-      "dest": "/client/static/img/$1.png"
+      "src": "^/(manifest\\.json|favicon\\.ico|asset-manifest\\.json)$",
+      "dest": "/client/build/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/client/src/index.html"
+      "dest": "/client/build/index.html"
     }
   ]
 }

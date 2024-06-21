@@ -8,10 +8,9 @@
     ],
     "dependencies": {
         "@parcel/watcher": "^2.4.1",
-        "parcel": "^2.12.0",
-        "yarn": "^1.22.22"
+        "parcel": "^2.12.0"
     },
     "scripts": {
-        "build": "npm run build --workspace=client && npm run build --workspace=server"
+        "build": "cd client && npm install && npm run build && cd ../server && npm install"
     }
 }
