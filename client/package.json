@@ -2,15 +2,18 @@
   "name": "anima-project-client",
   "version": "1.0.0",
   "description": "Frontend for Anima project",
+  "private": true,
   "scripts": {
-    "build": "react-scripts build && mv build/* src/ && rmdir build",
-    "start": "parcel src/index.html --port 3000"
+    "start": "react-scripts start",
+    "build": "npx react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "socket.io-client": "^4.7.5",
-    "yarn": "^1.22.22"
+    "react-scripts": "^5.0.1",
+    "socket.io-client": "^4.7.5"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
@@ -34,5 +37,25 @@
   "staticFiles": {
     "staticPath": "static",
     "staticOutPath": "./"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
+
+
